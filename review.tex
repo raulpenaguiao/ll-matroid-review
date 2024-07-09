@@ -17,31 +17,43 @@
 
 \section*{Outline}
 
-The paper proposes a notion of cycle matriod for a \say{Benjamini - Schramm} limiting object on graphs, called \textbf{graphings}, prompting a generalisation of a construction of a matroid in limits of graphs.
-A notion of infinite matroid is a topic of active research and one can find several proposals in the literature.
+This paper proposes a notion of cycle matriod for a \say{Benjamini - Schramm} limiting object on graphs, called \textbf{graphings}, prompting a generalisation the \say{cycle matroid} of a graph.
+The notion of an infinite matroid is a topic of active research and one can find several proposals in the literature (see for instance \cite{bruhn2013axioms}, which the author cites).
+In this proposal, the author sorts issues related to measurability and infinite classes that make the submodularity proofs technically involved.
 
-This paper tacitly aims at kickstarting a new limit theory on matroids.
-It also presents the proof of fundamental claims.
-For instance, the  normalized rank functions of a sequence of graphs converges to the normalized rank function of the Benjamini - Schramm limit.
-It is also shown that spanning forests on the so called hyperfinite graphings give rise to additive submeasures, which are akin to basis of this generalised matroid.
-Finally, it discloses some conjectures.
-For instance, the author asks if the limit of does this hold for the rank functions themselves? ) as well as raising some interesting questions (for instance, what is the right notion of bases?).
-The author also asks for a full characterisation of bases
+The main result presented here is that this notion of cycle matroid has a notion of \say{total rank} that is amenable to limits.
+This tacitly aims at kickstarting a new limit theory on matroids.
 
+In fact, the paper presents the proof of fundamental claims of a limit theory, like how to construct submodular functions (that give rise to infinite matroids) in the context of Borel-measurable sets, and some bounds on the rank function depending on some statistics of the graphing.
+It is my understanding that not only the results but also the ideas are useful in furthering this limit theory on similar objects.
+
+The question of bases is also addressed.
+It is also shown that spanning forests on so called hyperfinite graphings give rise to additive submeasures, which are akin to basis of this generalised matroid.
+
+Finally, the author discloses some conjectures, mainly connected to generalisation of results presented in the article.
+
+It is my suggestion to accept this paper for publication in the Journal of Combinatorial Theory B.
 The exposition is clear and direct, benefiting the reader that wants to readily use the important ideas to extend this theory.
-It covers Borel partitions and some Borel-preserving operations, Re-randomisation (a method useful to extract integrals), a definition of graphings and the rank function.
+It covers Borel partitions and some Borel-preserving operations, Re-randomisation (a method useful to compute underlying integrals), a definition of graphings and the rank function.
 It also introduces several technical definitions like \textit{locally estimable parameters} \textit{hyperfinite graphings}, \textit{strongly bounded}, \textit{continuous from above}, and \textit{absolutely continuous set functions}.
 
-I also make some typographical comments that are worth correcting.
+I make some typographical comments that may be worth correcting, as well as some questions that the author may piqued my interest.
 
 \section*{Questions}
 
 \begin{itemize}
-\entry{15}{minorizing charge for $\rho$ is in fact countably additive} 
-I don't know what countably additive means.
+\entry{3}{On $\mathcal B$ partitions} I have the impression that $\mathcal P$ is a $\mathcal B$-partition if and only if each part is a Borel measurable set, since $\mathcal P(A)$ is a union of sets of the form $\mathcal P_x$. Is this the case?
+
+\entry{5}{Lemma 2.3} 
+Assuming axiom of choice.
+
+\entry{7}{Tends to the uniform distribution} 
+It might be periodic.
+
 
 \entry{16}{hyperfinite definition} 
-Is it possible that this definition can be rephrased as $\eta(\bigcup_{A \text{ infinite connected component}} A) = 0$? Mayeb an example can give a good idea what we are working with
+Is it possible that this definition can be rephrased as $\eta(\bigcup_{A \text{ infinite connected component}} A) = 0$? Maybe an example can give a good idea what we are working with.
+
 
 
 \end{itemize}
@@ -53,7 +65,50 @@ Is it possible that this definition can be rephrased as $\eta(\bigcup_{A \text{ 
 \subsection*{Reading ease comments}
 
 \begin{itemize}
-\entry{3}{Theorem 2.3} 
+
+\entry{6}{since this holds for every $\mathbf{x}$} 
+by conditioning in each event $\mathbf{x} = x$.
+
+\entry{6}{rerandomizing along $\mathcal Q$} 
+rerandomizing $\mathbf{v}$ along $\mathcal Q$.
+
+
+\entry{7}{Then no partition class containing $\mathbf{v}$ changes when replacing $\mathcal Q $ by $\mathcal Q'$} 
+Does this mean simply $\mathcal Q_x  = \mathcal Q_x' $ for every $x$?
+
+
+\entry{8}{$\mathcal R \leq \mathcal Q$} 
+this is classical notation but a reminder on what this means is great, specially to clarify  if one means "finer" or "coarser" partition in this case, as it can be confusing.
+This is unfortunately done only in a parenthesis, where the notation is not used.
+
+\entry{8}{Use of variable $n$} 
+It is implicit that $n = |J|$ but not very clear.
+
+\entry{10}{then the class of $\mathcal \wedge \mathcal Q$ is infinite} Which class of $\mathcal \wedge \mathcal Q$? Are we talking about $\mathcal \wedge \mathcal Q(Y)$? 
+
+\entry{11}{we may assume that for every point, three possibilities remain (...)} this part got me confused and I drew a diagram like the following to convince myself this is true, perhaps the author can adopt for sake of organization of the proof.
+
+\begin{center}
+\begin{tabular}{|c || c c c||} 
+ \hline
+  & $|\mathcal P_x| = 1$ &  $|\mathcal P_x| > 1$ & $|\mathcal P_x| = \infty$ \\ [0.5ex] 
+ \hline\hline
+ $|\mathcal Q_x| = 1$ & (i) & --- & --- \\ 
+ \hline
+ $|\mathcal Q_x| > 1$ & 1º, 2º and 3º & (iii) & --- \\
+ \hline
+ $|\mathcal Q_x| = \infty$ & (ii) &  (iii) & (iii) \\
+ \hline
+\end{tabular}
+\end{center}
+
+\entry{11}{symmetric Borel subset} 
+It is not clear to me what this means. Furthermore, the author takes $\binom{J}{2}$ to be a subset of $J\times J$, and this should be clearly stated.
+
+\entry{15}{minorizing charge for $\rho$ is in fact countably additive} 
+I don't know what countably additive means, perhaps a definition here would be helpful.
+
+\entry{19}{$B_k(x)$} this implies we are choosing $r = k$, but it is not clearly stated.
 
 \end{itemize}
 
@@ -61,13 +116,22 @@ Is it possible that this definition can be rephrased as $\eta(\bigcup_{A \text{ 
 \subsection*{Typographical comments}
 
 \begin{itemize}
-\entry{1}{The two conjectures then follows}
+\entry{2}{of subgraph $(V, X)$.} of the subgraph $(V, X)$.
+
+\entry{4}{For some $Q$} For some $Q \in \mathcal Q$
+
+\entry{8}{$\mathcal Q_{fin}$} The use of this notation is confusing, earlier it was used as the \say{union of finite partition classes of $\mathcal Q$}, but the notation $Y\in \mathcal Q_{fin}$ and the following discussion seems to indicate that $Y$ is a finite part of $\mathcal Q$.
+
+\entry{9}{$\int_J f(x)$} $\int_J f'(x)$
+
+
+\entry{10}{Then If $Y$} If $Y$
+
+\entry{13}{$|V(G_{\mathbf{u}}^X|$} $|V(G_{\mathbf{u}}^X)|$
+
+\entry{19}{we can compute an estimate $R$} we can compute an estimate $R = R(B_r(x_1), \cdots , B_r(x_k))$.
 
 \end{itemize}
-
-\section*{Recommendation}
-I suggest to accept this paper 
-
 
 
 \bibliographystyle{alpha}
