@@ -17,11 +17,12 @@
 
 \section*{Outline}
 
-This paper proposes a notion of cycle matriod for a \say{Benjamini - Schramm} limiting object on graphs, called \textbf{graphings}, prompting a generalisation the \say{cycle matroid} of a graph.
+This paper proposes a notion of \say{cycle matriod} for a \say{Benjamini - Schramm} limiting object on graphs, called \textbf{graphings}, prompting a generalisation the cycle matroid of a graph.
 The notion of an infinite matroid is a topic of active research and one can find several proposals in the literature (see for instance \cite{bruhn2013axioms}, which the author cites).
-In this proposal, the author sorts issues related to measurability and infinite classes that make the submodularity proofs technically involved.
+In this proposal, the author deals with issues related to measurability and infinite classes.
+These make the submodularity proofs technically involved.
 
-The main result presented here is that this notion of cycle matroid has a notion of \say{total rank} that is amenable to limits.
+The main result presented here is that this notion of cycle matroid is well defined and is indeed a submodular function, as well as that the cycle matroid has a notion of \say{total rank} that is amenable to limits.
 This tacitly aims at kickstarting a new limit theory on matroids.
 
 In fact, the paper presents the proof of fundamental claims of a limit theory, like how to construct submodular functions (that give rise to infinite matroids) in the context of Borel-measurable sets, and some bounds on the rank function depending on some statistics of the graphing.
@@ -37,7 +38,7 @@ The exposition is clear and direct, benefiting the reader that wants to readily 
 It covers Borel partitions and some Borel-preserving operations, Re-randomisation (a method useful to compute underlying integrals), a definition of graphings and the rank function.
 It also introduces several technical definitions like \textit{locally estimable parameters} \textit{hyperfinite graphings}, \textit{strongly bounded}, \textit{continuous from above}, and \textit{absolutely continuous set functions}.
 
-I make some typographical comments that may be worth correcting, as well as some questions that the author may piqued my interest.
+I make some typographical comments that may be worth correcting, as well as some questions that piqued my interest.
 
 \section*{Questions}
 
@@ -81,10 +82,10 @@ Does this mean simply $\mathcal Q_x  = \mathcal Q_x' $ for every $x$?
 this is classical notation but a reminder on what this means is great, specially to clarify  if one means "finer" or "coarser" partition in this case, as it can be confusing.
 This is unfortunately done only in a parenthesis, where the notation is not used.
 
-\entry{8}{Use of variable $n$} 
-It is implicit that $n = |J|$ but not very clear.
+\entry{8}{$n$} 
+It is implicit that $n = |J|$ but not clearly defined.
 
-\entry{10}{then the class of $\mathcal \wedge \mathcal Q$ is infinite} Which class of $\mathcal \wedge \mathcal Q$? Are we talking about $\mathcal \wedge \mathcal Q(Y)$? 
+\entry{10}{then the class of $\mathcal P \wedge \mathcal Q$ is infinite} Which class of $\mathcal P \wedge \mathcal Q$? Are we talking about $\mathcal P \wedge \mathcal Q(Y)$? 
 
 \entry{11}{we may assume that for every point, three possibilities remain (...)} this part got me confused and I drew a diagram like the following to convince myself this is true, perhaps the author can adopt for sake of organization of the proof.
 
@@ -101,6 +102,13 @@ It is implicit that $n = |J|$ but not very clear.
  \hline
 \end{tabular}
 \end{center}
+
+This is perhaps the central proof of the paper, the one that is more technical, and I find it easy to misunderstand the structure of the proof.
+Additional resources should be considered, for instance an accompanying example to illustrate the steps of the proof. 
+In general, I found it easy to understand the computations of the expected values that lead to the inequality in each case.
+It was however a very intricate task to understand that these arguments are enough to prove each respective case at hand.
+For instance in \say{get rid of non-singleton finite classes containing a singleton class from the other partition} it is not easy to immediately get that we are talking about $\mathcal P$ and $\mathcal Q$, and the construction described afterwards can be interpreted ambiguously.
+
 
 \entry{11}{symmetric Borel subset} 
 It is not clear to me what this means. Furthermore, the author takes $\binom{J}{2}$ to be a subset of $J\times J$, and this should be clearly stated.
